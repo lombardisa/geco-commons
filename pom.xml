@@ -2,16 +2,16 @@
 
 	<!-- DETAILS -->
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>ch.lombardi.spai</groupId>
-	<artifactId>spai-commons</artifactId>
-	<version>2.0.2-SNAPSHOT</version>
+	<groupId>ch.lombardi.gestione-consorzi</groupId>
+	<artifactId>gestione-consorzi-commons</artifactId>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
-	<name>SPAI Commons</name>
+	<name>Gestione consorzi Commons</name>
 
 	<!-- SCM -->
 	<scm>
-		<connection>scm:git:https://github.com/lombardisa/spai-commons.git</connection>
-		<url>https://github.com/lombardisa/spai-commons</url>
+		<connection>scm:git:https://github.com/lombardisa/gestione-consorzi-commons.git</connection>
+		<url>https://github.com/lombardisa/gestione-consorzi-commons</url>
 		<tag>HEAD</tag>
 	</scm>
 
@@ -108,7 +108,7 @@
 					</includes>
 					<merge>true</merge>
 					<!-- github repo name -->
-					<repositoryName>spai-commons</repositoryName>
+					<repositoryName>gestione-consorzi-commons</repositoryName>
 					<!-- github username -->
 					<repositoryOwner>lombardisa</repositoryOwner>
 				</configuration>
