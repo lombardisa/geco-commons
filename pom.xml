@@ -6,7 +6,7 @@
 	<artifactId>geco-commons</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
-	<name>Gestione consorzi Commons</name>
+	<name>GeCo Commons</name>
 
 	<!-- SCM -->
 	<scm>
