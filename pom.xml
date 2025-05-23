@@ -2,16 +2,16 @@
 
 	<!-- DETAILS -->
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>ch.lombardi.gestione-consorzi</groupId>
-	<artifactId>gestione-consorzi-commons</artifactId>
+	<groupId>ch.lombardi.geco</groupId>
+	<artifactId>geco-commons</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 	<name>Gestione consorzi Commons</name>
 
 	<!-- SCM -->
 	<scm>
-		<connection>scm:git:https://github.com/lombardisa/gestione-consorzi-commons.git</connection>
-		<url>https://github.com/lombardisa/gestione-consorzi-commons</url>
+		<connection>scm:git:https://github.com/lombardisa/geco-commons.git</connection>
+		<url>https://github.com/lombardisa/geco-commons</url>
 		<tag>HEAD</tag>
 	</scm>
 
@@ -108,7 +108,7 @@
 					</includes>
 					<merge>true</merge>
 					<!-- github repo name -->
-					<repositoryName>gestione-consorzi-commons</repositoryName>
+					<repositoryName>geco-commons</repositoryName>
 					<!-- github username -->
 					<repositoryOwner>lombardisa</repositoryOwner>
 				</configuration>
