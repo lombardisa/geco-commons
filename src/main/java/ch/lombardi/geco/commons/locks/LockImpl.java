@@ -13,8 +13,7 @@ public class LockImpl implements Lock {
 	private static final long serialVersionUID = -9015960979692928667L;
 
 	// VARIABLES
-	private String owner;
-	private String entityName;
+	private Integer ownerId;
 	private Integer entityId;
 	private LocalDateTime timeStamp;
 
@@ -27,28 +26,20 @@ public class LockImpl implements Lock {
 
 	/**
 	 * Constructor.
-	 * 
-	 * @param owner      The lock owner id (not null)
-	 * @param entityName The locked entity name (not null)
-	 * @param entityId   The locked entity id (not null)
-	 * @param timeStamp  The lock acquisition date and time (not null)
+	 *
+	 * @param entityId  The locked entity id (not null)
+	 * @param timeStamp The lock acquisition date and time (not null)
 	 */
-	public LockImpl(String owner, String entityName, Integer entityId, LocalDateTime timeStamp) {
+	public LockImpl(Integer ownerId, Integer entityId, LocalDateTime timeStamp) {
 		super();
-		this.owner = owner;
-		this.entityName = entityName;
+		this.ownerId = ownerId;
 		this.entityId = entityId;
 		this.timeStamp = timeStamp;
 	}
 
 	@Override
-	public String getOwner() {
-		return owner;
-	}
-
-	@Override
-	public String getEntityName() {
-		return entityName;
+	public Integer getOwnerId() {
+		return ownerId;
 	}
 
 	@Override
@@ -61,12 +52,8 @@ public class LockImpl implements Lock {
 		return timeStamp;
 	}
 
-	public void setOwner(String owner) {
-		this.owner = owner;
-	}
-
-	public void setEntityName(String entityName) {
-		this.entityName = entityName;
+	public void setOwner(Integer ownerId) {
+		this.ownerId = ownerId;
 	}
 
 	public void setEntityId(Integer entityId) {
@@ -82,8 +69,7 @@ public class LockImpl implements Lock {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((entityId == null) ? 0 : entityId.hashCode());
-		result = prime * result + ((entityName == null) ? 0 : entityName.hashCode());
-		result = prime * result + ((owner == null) ? 0 : owner.hashCode());
+		result = prime * result + ((ownerId == null) ? 0 : ownerId.hashCode());
 		return result;
 	}
 
@@ -101,16 +87,8 @@ public class LockImpl implements Lock {
 				return false;
 		} else if (!entityId.equals(other.entityId))
 			return false;
-		if (entityName == null) {
-			if (other.entityName != null)
-				return false;
-		} else if (!entityName.equals(other.entityName))
-			return false;
-		if (owner == null) {
-			if (other.owner != null)
-				return false;
-		} else if (!owner.equals(other.owner))
-			return false;
-		return true;
+		if (ownerId == null) {
+			return other.ownerId == null;
+		} else return ownerId.equals(other.ownerId);
 	}
 }
