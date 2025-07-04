@@ -19,14 +19,7 @@ public interface Lock extends Serializable {
 	 * 
 	 * @return The lock owner id
 	 */
-	String getOwner();
-
-	/**
-	 * Get the locked entity name.
-	 * 
-	 * @return The locked entity name
-	 */
-	String getEntityName();
+	Integer getOwnerId();
 
 	/**
 	 * Get the locked entity id.
