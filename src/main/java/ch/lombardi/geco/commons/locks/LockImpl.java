@@ -16,6 +16,7 @@ public class LockImpl implements Lock {
 	private Integer ownerId;
 	private Integer entityId;
 	private LocalDateTime timeStamp;
+	private String entityName;
 
 	/**
 	 * Default empty constructor (necessary for Jackson serialization)
@@ -30,9 +31,10 @@ public class LockImpl implements Lock {
 	 * @param entityId  The locked entity id (not null)
 	 * @param timeStamp The lock acquisition date and time (not null)
 	 */
-	public LockImpl(Integer ownerId, Integer entityId, LocalDateTime timeStamp) {
+	public LockImpl(Integer ownerId, String entityName, Integer entityId, LocalDateTime timeStamp) {
 		super();
 		this.ownerId = ownerId;
+		this.entityName = entityName;
 		this.entityId = entityId;
 		this.timeStamp = timeStamp;
 	}
@@ -40,6 +42,11 @@ public class LockImpl implements Lock {
 	@Override
 	public Integer getOwnerId() {
 		return ownerId;
+	}
+
+	@Override
+	public String getEntityName() {
+		return entityName;
 	}
 
 	@Override
@@ -56,6 +63,10 @@ public class LockImpl implements Lock {
 		this.ownerId = ownerId;
 	}
 
+	public void setEntityName(String entityName) {
+		this.entityName = entityName;
+	}
+
 	public void setEntityId(Integer entityId) {
 		this.entityId = entityId;
 	}
@@ -69,6 +80,7 @@ public class LockImpl implements Lock {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((entityId == null) ? 0 : entityId.hashCode());
+		result = prime * result + ((entityName == null) ? 0 : entityName.hashCode());
 		result = prime * result + ((ownerId == null) ? 0 : ownerId.hashCode());
 		return result;
 	}
@@ -86,6 +98,11 @@ public class LockImpl implements Lock {
 			if (other.entityId != null)
 				return false;
 		} else if (!entityId.equals(other.entityId))
+			return false;
+		if (entityName == null) {
+			if (other.entityName != null)
+				return false;
+		} else if (!entityName.equals(other.entityName))
 			return false;
 		if (ownerId == null) {
 			return other.ownerId == null;
