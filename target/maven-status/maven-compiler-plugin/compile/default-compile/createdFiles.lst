@@ -1,0 +1,14 @@
+ch\lombardi\geco\commons\notifications_group\NotificationAddresseeGruppi.class
+ch\lombardi\geco\commons\afc_currency_rates\AFCCurrencyRate.class
+ch\lombardi\geco\commons\notifications\SenderType.class
+ch\lombardi\geco\commons\notifications_group\NotificationAddresseeGruppiImpl.class
+ch\lombardi\geco\commons\notifications\Category.class
+ch\lombardi\geco\commons\notifications\Type.class
+ch\lombardi\geco\commons\locks\LockImpl.class
+ch\lombardi\geco\commons\notifications\Action.class
+ch\lombardi\geco\commons\notifications\Notification.class
+ch\lombardi\geco\commons\notifications\NotificationAddressee.class
+ch\lombardi\geco\commons\locks\Lock.class
+ch\lombardi\geco\commons\notifications\NotificationAddresseeImpl.class
+ch\lombardi\geco\commons\notifications\Status.class
+ch\lombardi\geco\commons\notifications\NotificationImpl.class
