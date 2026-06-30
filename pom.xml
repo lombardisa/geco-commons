@@ -29,7 +29,7 @@
 		<maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
 
 		<!-- Jackson -->
-		<jackson.version>2.13.5</jackson.version>
+		<jackson.version>2.22.0</jackson.version>
 
 		<github.global.server>git-scm-server</github.global.server>
 	</properties>
